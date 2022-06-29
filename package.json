@@ -10,7 +10,10 @@
 		"build": "turbo run build",
 		"dev": "turbo run dev --parallel",
 		"lint": "turbo run lint",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"buildAppWeb": "cd apps/web && yarn build",
+		"buildAppDock": "cd apps/dock && yarn build",
+		"build:vercel": "yarn buildAppWeb && buildAppDock"
 	},
 	"devDependencies": {
 		"eslint-config-custom": "*",
